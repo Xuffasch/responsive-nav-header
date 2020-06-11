@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flexbox hide some nav on mobile</title>
+    <meta name="description" content="Flexbox to hide items when on mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <div class="nav-container-appearence nav-container-children-display">
+        <div class="img-container-appearence img-container-children-display">
+            <img class="logo" src="fruits_logo.svg" alt="logo">
+        </div>
+        <div class="btn-container">
+            <button class="menu-button" id="menu-button">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>            
+            </button>
+        </div>
+        <div class="menu-container" id="menu-container">
+            <ul class="menu" id="menu">
+                <li class="item"><a href="/">Produits</a></li>
+                <li class="item"><a href="/">Fruits</a></li>
+                <li class="item"><a href="/">Envies!</a></li>
+                <li class="item"><a href="/">Légumes</a></li>
+                <li class="item"><a href="/">Compte</a></li>
+                <li class="item"><a href="/">Panier</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let button = document.getElementById('menu-button');
+            button.classList.toggle("change");
+
+            let menu = document.getElementById('menu-container');
+            menu.classList.toggle("menu-toggle-on");
+        }
+
+        var menu_button = document.getElementById('menu-button');
+        menu_button.onclick = toggleMenu;
+    </script>
+</body>
+
+</html>
